@@ -55,3 +55,11 @@ a {
   /* auto = автоматические отступы по бокам */
   margin: 10px auto;
 }
+
+.post_block img {
+  width: 1200px;
+  height: 500px;
+
+  object-fit: cover;
+  object-position: top;
+}
