@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <!-- 
+    ol = ordered list
+    ul = unordered list
+    li = list item
+   -->
+
+  <ol>
+    <li>
+      Пункт первый
+      <ul class="inner_list">
+        <li>Подпункт первый</li>
+        <li>Подпункт второй</li>
+        <li>Подпункт третий</li>
+      </ul>
+    </li>
+    <li>Пункт второй</li>
+    <li>Пункт третий</li>
+  </ol>
+  <!-- br = break -->
+  <br>
+
+  <ul>
+    <li>Пункт первый</li>
+    <li>Пункт второй</li>
+    <li>Пункт третий</li>
+  </ul>
+
+  <br>
+
+  <h2>Tables</h2>
+  <br>
+
+  <!-- 
+    tr = table row
+    td = table data
+    <table border="1">
+
+    table base elements
+    table tr td
+
+    th = table header
+    thead = table head
+    tbody = table body
+    tfoot = table footer
+
+    colspan = объединение ячеек в ширину
+    rowspan = объединение ячеек в высоту
+   -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name of browser</th>
+        <th>Version</th>
+        <th>OS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Chrome</td>
+        <td rowspan="2">v1.1</td>
+        <td>Windows</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <!-- <td>v1.1</td> -->
+        <td>Mac OS</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Brawser specs</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
