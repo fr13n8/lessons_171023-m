@@ -22,7 +22,7 @@ ul {
 
 table {
   margin: 0 auto;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   margin-bottom: 50px;
 }
 
@@ -47,3 +47,70 @@ class name
 id name
 #image
 */
+
+/* .even_row {
+  background-color: gray;
+} */
+
+/*
+0 ... n=10
+an [+-] b 
+
+n = 0
+2 * 0 = 0 
+n = 1
+2 * 1 = 2 tr
+n = 2
+2 * 2 = 4 tr
+n = 3
+2 * 3 = 6 tr
+...
+n = 5
+2 * 5 = 10 tr
+
+odd = 2n + 1
+even = 2n
+*/
+
+/* .second_table tr:nth-child(even) {
+  background-color: antiquewhite;
+} */
+
+/*
+Создать таблицу, в которой строки разукрашены последовательно в 4 любых цвета.
+1-green = 4n - 3
+2-blue = 4n - 2
+3-red = 4n - 1
+4-yellow = 4n
+5-green = 4n - 3
+6-blue = 4n - 2
+7-red = 4n - 1
+8-yellow = 4n
+9-green = 4n - 3
+10-blue = 4n - 2
+
+4n
+0 -> 10
+n = 0
+4 * 0 = 0
+n = 1
+4 * 1 = 4
+n = 2
+4 * 2 = 8
+*/
+
+.second_table tr:nth-child(4n) {
+  background-color: yellow;
+}
+
+.second_table tr:nth-child(4n-1) {
+  background-color: red;
+}
+
+.second_table tr:nth-child(4n-2) {
+  background-color: blue;
+}
+
+.second_table tr:nth-child(4n-3) {
+  background-color: green;
+}
