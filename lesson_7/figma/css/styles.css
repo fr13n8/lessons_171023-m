@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-image: url("../media/Rectangle\ \(2\).png");
+  padding-top: 135px;
+  padding-bottom: 140px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.form_container .user_data_inputs_block {
+  display: flex;
+  margin-bottom: 35px;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.form_container .user_data_inputs_block div,
+.form_container .message_block {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.form_container .user_data_inputs_block div:first-child {
+  margin-right: 30px;
+}
+
+.form_container label {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.form_container input,
+.form_container textarea {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.form_container input {
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+
+.form_container textarea {
+  resize: none;
+  padding-bottom: 84px;
+}
+
+.form_container .buttons_block {
+  /* border: 1px solid red; */
+}
+
+.form_container .message_block {
+  margin-bottom: 50px;
+}
+
+.form_container .buttons_block button {
+  color: white;
+  background-color: #005FA3;
+  padding: 19px 18px;
+  font-size: 18px;
+}
+
+.form_container .buttons_block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form_container input::placeholder,
+.form_container textarea::placeholder {
+  font-size: 21px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+/*
+Lato - 300, 400
+*/
+
+.form_container label,
+.form_container .buttons_block button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.form_container .buttons_block button {
+  border: none;
+}
