@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+}
+
+.btn {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.btn:hover {
+  background-color: #535353;
+  padding: 10px;
+  box-shadow: 5px 5px 5px 2px black;
+  margin-top: 50px;
+}
+
+/* input:focus {
+  outline: none;
+  box-shadow: 5px 5px 5px 2px black;
+  border: 1px solid black;
+} */
+
+img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* 
+Используя псевдокласс сделайте так, чтобы при наведении на картинку она увеличивалась. (изменяйте значение width и/или height) 
+ */
+
+/* img:hover {
+  width: 450px;
+  height: 250px;
+} */
+
+.btn_2 {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 22px;
+  background-color: aqua;
+  /* transition: all 2s 1s; */
+  /* transition-property: background-color;
+  transition-duration: 2s;
+  transition-delay: 1s; */
+  /* transition-timing-function: ease-in-out;
+  by default ease
+  transition-timing-function: ease;
+  transition-timing-function: linear;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out; */
+  /* transition-timing-function: cubic-bezier(.15,-1.55,.68,1.95); */
+
+  /* (стили которые надо анимировать) длительность задержка кубическая функция  */
+  transition: background-color 2s 1s cubic-bezier(.15,-1.55,.68,1.95),
+              transform 2s 1s cubic-bezier(.15,-1.55,.68,1.95);
+}
+
+.btn_2:hover {
+  background-color: red;
+  /*
+    scale -> масштабирование элемента
+  */
+  transform: rotate(180deg) scale(2);
+  color: orange;
+}
+
+/* Используя псевдокласс hover и свойство transform сделайте так, чтобы при наведении на картинку появлялась тень и она делала полный оборот (360 градусов). */
+
+/*
+cubic-bezier(0,0,1,1) 
+*/
+
+img {
+  transition: all 2s 1s cubic-bezier(0, 1.27, 1,-0.43);
+}
+
+img:hover {
+  transform: rotate(360deg);
+  box-shadow: 5px 5px 10px 5px black;
+}
