@@ -28,16 +28,140 @@ body {
   top: 20px; */
 
   position: absolute;
-  right: 0;
-  bottom: 0;
+  /* left: 50px;
+  top: 20px; */
 }
 
-.wrapper .inner:nth-child(1) {
-  z-index: 10;
+/*
+right, top, left, bottom
+стили для указания положения элемента на основе его типа позицианирования 
+*/
+
+.first .inner:nth-child(1) {
+  /*
+  определяет порядок наложения элементов которые позицианированы с помощью position
+  */
+  z-index: 20;
+  right: 50px;
+  top: 50px;
 }
 
-.wrapper .inner:nth-child(2) {
+.first .inner:nth-child(2) {
   right: 30px;
   top: 30px;
   background-color: black;
+  z-index: 10;
+}
+
+.first .inner:nth-child(3) {
+  right: 10px;
+  top: 10px;
+  background-color: red;
+  z-index: 5;
+}
+
+/* 
+Добавить 4 блока и расположить их по углам экрана родительского блока (верхний левый, верхний правый, нижний левый, нижний правый).
+*/
+
+.second .inner:nth-child(1) {
+  bottom: 5px;
+  left: 5px;
+  background-color: blue;
+  
+}
+
+.second .inner:nth-child(2) {
+  right: 5px;
+  bottom: 5px;
+  background-color: black;
+}
+
+.second .inner:nth-child(3) {
+  right: 5px;
+  top: 5px;
+  background-color: red;
+}
+
+.second .inner:nth-child(4) {
+  background-color: green;
+  left: 5px;
+  top: 5px;
+}
+
+/*
+Переделать результат выполнения прошлого задания таким образом, чтобы блоки частично пересекались и поменять их порядок отображения через z-index. 
+*/
+
+.third .inner:nth-child(1) {
+  top: 20px;
+  left: 20px;
+  background-color: blue;
+  z-index: 30; 
+}
+
+.third .inner:nth-child(2) {
+  top: 5px;
+  left: 5px;
+  background-color: black;
+  z-index: 40;
+}
+
+.third .inner:nth-child(3) {
+  top: 30px;
+  left: 30px;
+  background-color: red;
+  z-index: 20;
+}
+
+.third .inner:nth-child(4) {
+  background-color: green;
+  top: 35px;
+  left: 35px;
+  z-index: 10;
+}
+
+.arrow_up {
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 22px;
+
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* 
+transparent - полная прозрачность 
+*/
+
+.arrow_up:hover {
+  background-color: #535353;
+}
+
+.navbar {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+
+  /*
+  sticky - не перекрывает другие элементы изначально 
+  */
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navbar ul li {
+  cursor: pointer;
 }
