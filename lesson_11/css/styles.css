@@ -22,8 +22,10 @@ header nav ul {
   display: flex;
 }
 
-header nav ul li {
+header nav ul li a {
   font-size: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 header nav ul li:not(:last-child) {
@@ -32,4 +34,138 @@ header nav ul li:not(:last-child) {
 
 header .social_block a:not(:last-child) {
   margin-right: 20px;
+}
+
+.about_us {
+  display: flex;
+}
+
+.about_us div {
+  width: 50%;
+}
+
+/*
+first-child
+last-child
+nth-child 
+*/
+
+.about_us div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_us div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 0 65px;
+}
+
+.about_us div:nth-child(2) h2 {
+  margin-bottom: 23px;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.about_us div:nth-child(2) p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.our_projects {
+  padding: 124px 65px;
+  background-color: #DCFFEB;
+}
+
+.our_projects .projects_cards_block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.our_projects .projects_cards_block article {
+  width: 436px;
+  height: 376px;
+  background-image: url(../media/project.png);
+  background-size: cover;
+  padding: 36px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+}
+
+.our_projects div h2 {
+  margin-bottom: 50px;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.our_projects .projects_cards_block article h3 {
+  margin-bottom: 16px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.our_projects .projects_cards_block article p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.our_projects .projects_cards_block article:hover p,
+.our_projects .projects_cards_block article:hover h3 {
+  opacity: 1;
+}
+
+footer {
+  padding: 84px 70px 76px;
+}
+
+footer .contacts_block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+footer div h2 {
+  margin-bottom: 55px;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+footer .contacts_block div {
+  text-align: center;
+}
+
+footer .contacts_block div img {
+  margin-bottom: 24px;
+  height: 49px;
+}
+
+footer .contacts_block div h3 {
+  font-size: 24px;
+  color: #999999;
+  margin-bottom: 25px;
+}
+
+footer .contacts_block div:nth-child(4) p {
+  color: #F7654A;
 }
