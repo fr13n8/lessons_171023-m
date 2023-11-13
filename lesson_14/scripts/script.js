@@ -84,3 +84,12 @@ const user = {
 
 console.log(user[id]) // 2
 console.log(user.id) // 1
+
+// --------- ссылочный тип
+let obj = {a: 1, b: 2} // в переменной obj хранится адрес до этого объекта || пр. 0x004aa0dgh
+let secondObj = obj // в переменной secondObj тоже хранится адрес до этого объекта || пр. 0x004aa0dgh
+obj = "Hello world" // переопределение значания переменной obj || пр. 0x003SD54G
+console.log(secondObj, obj)
+
+let thirdObj = {...secondObj} // клонирование объекта с помощью оператора spread
+let thirdObj2 = structuredClone(secondObj) // клонирование объекта с помощью функции structuredClone
