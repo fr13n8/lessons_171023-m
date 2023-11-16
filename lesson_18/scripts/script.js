@@ -65,8 +65,17 @@
 
 // Написать скрипт, который находит картинки в блоке с классом main и первым 5 картинкам меняет url на указанное значение. (https://www.dice.com/binaries/medium/content/gallery/dice/insights/2021/03/shutterstock_1536573389.jpg)
 
-const imgElems = document.querySelectorAll(".main img")
-for (let i = 0; i < 5; i++) {
-  // imgElems[i].setAttribute("src", "https://www.dice.com/binaries/medium/content/gallery/dice/insights/2021/03/shutterstock_1536573389.jpg")
-  imgElems[i].src = "https://www.dice.com/binaries/medium/content/gallery/dice/insights/2021/03/shutterstock_1536573389.jpg"
+// const imgElems = document.querySelectorAll(".main img")
+// for (let i = 0; i < 5; i++) {
+//   // imgElems[i].setAttribute("src", "https://www.dice.com/binaries/medium/content/gallery/dice/insights/2021/03/shutterstock_1536573389.jpg")
+//   imgElems[i].src = "https://www.dice.com/binaries/medium/content/gallery/dice/insights/2021/03/shutterstock_1536573389.jpg"
+// }
+
+// Написать скрипт, который находит все ссылки на странице и формирует массив со всеми адресами. В итоге этот массив необходимо вывести в консоль.
+const aLinks = document.querySelectorAll("a")
+const hrefValues = []
+for(let i = 0; i < aLinks.length; i++) {
+  const hrefValue = aLinks[i].href
+  hrefValues.push(hrefValue)
 }
+console.log(hrefValues)
