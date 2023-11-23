@@ -93,7 +93,7 @@ function rerender() {
     productsListDiv.append(pElem)
   }
 
-  products = products = products.sort(function(a, b) {
+  products = products.sort(function(a, b) {
     return a.title.localeCompare(b.title)
   })
 
