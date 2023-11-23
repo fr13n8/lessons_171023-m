@@ -60,11 +60,15 @@ function createProductCard({title, price}) { // let {title, price} = product
 }
 
 // Разработать функцию rerender. Эта функция очищает контейнер с карточками и создает множество карточек с товарами из массива. Вызвать rerender при добавлении нового продукта.
+// Доработать rerender таким образом, чтобы при двойном клике по карточке в консоль выводилось название товара.
 function rerender() {
   const productsListDiv = document.querySelector(".products_list_container")
   productsListDiv.innerHTML = "" // очищаем контейнер с карточками
   for(let i = 0; i < products.length; i++) {
     const productCardElem = createProductCard(products[i])
+    productCardElem.addEventListener("dblclick", function() {
+      console.log(products[i].title)
+    })
     productsListDiv.append(productCardElem)
   }
 }
